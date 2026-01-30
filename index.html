@@ -17,7 +17,7 @@
       background: radial-gradient(circle at top right, #ecfeff, #ffffff 70%);
     }
 
-    /* 🔒 Hide any WhatsApp launcher/icons */
+    /* 🔒 إخفاء أي أثر لأيقونة واتساب */
     .woot-widget-bubble [data-channel="whatsapp"],
     .woot-widget-bubble .whatsapp,
     a[href*="wa.me"] {
@@ -88,33 +88,9 @@
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services" class="py-28 max-w-7xl mx-auto px-6">
-  <h2 class="text-3xl font-bold mb-4 text-center">خدمات رقمية مصممة للقطاع الصحي</h2>
-  <p class="text-slate-500 text-center max-w-2xl mx-auto mb-20 font-light">
-    حلول عملية ترفع كفاءة العيادة وتُحسّن تجربة المريض دون تعقيد.
-  </p>
-
-  <div class="grid md:grid-cols-3 gap-12">
-    <div class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100">
-      <h3 class="text-xl font-bold mb-4">Workflow متكامل للعيادة</h3>
-      <p class="text-slate-500 font-light">بناء مسار رقمي يشمل الاستقبال، جمع البيانات، التوجيه، والمتابعة.</p>
-    </div>
-
-    <div class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100">
-      <h3 class="text-xl font-bold mb-4">تثقيف صحي مخصص</h3>
-      <p class="text-slate-500 font-light">محتوى صحي مبسط ومناسب لحالة كل مريض.</p>
-    </div>
-
-    <div class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100">
-      <h3 class="text-xl font-bold mb-4">أتمتة التواصل والمتابعة</h3>
-      <p class="text-slate-500 font-light">دردشة ذكية تقلل الضغط على الطاقم وتسرّع الاستجابة.</p>
-    </div>
-  </div>
-</section>
-
 </main>
 
+<!-- ================= FOOTER ================= -->
 <footer class="py-16 border-t border-slate-100 text-center text-slate-400">
   © 2026 SehaTech — الحلول الرقمية للعيادات والمصحات
 </footer>
@@ -130,23 +106,26 @@ function openChatwoot() {
 }
 </script>
 
-<!-- ================= CHATWOOT ================= -->
+<!-- ================= CHATWOOT (FINAL & CLEAN) ================= -->
 <script>
 (function(d,t) {
-  var BASE_URL="https://chatwoot.panel.aisaas.site";
-  var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-  g.src=BASE_URL+"/packs/js/sdk.js";
-  g.defer=true; g.async=true;
-  g.onload=function(){
+  var BASE_URL = "https://chatwoot.panel.merchility.com";
+  var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+  g.src = BASE_URL + "/packs/js/sdk.js";
+  g.defer = true;
+  g.async = true;
+
+  g.onload = function() {
     window.chatwootSDK.run({
-      websiteToken: "WSP9oqKuW18ALUno6fe41kc9",
+      websiteToken: "C1tVBhVgRsGA1vrRwJqEb7Sz",
       baseUrl: BASE_URL,
-      locale: "ar",
-      hideMessageBubble: false
+      websiteUrl: "https://sehatech.panel.merchility.com",
+      locale: "ar"
     });
   };
-  s.parentNode.insertBefore(g,s);
-})(document,"script");
+
+  s.parentNode.insertBefore(g, s);
+})(document, "script");
 </script>
 
 </body>
